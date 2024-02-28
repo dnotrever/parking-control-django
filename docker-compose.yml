@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    image: parking-control-backend
+    container_name: parking-back-app
+    restart: unless-stopped
+    volumes:
+      - .:/app
+    networks:
+      - parking-control
+networks:
+  parking-control:
+    name: parking-control
+    driver: bridge

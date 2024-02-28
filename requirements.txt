@@ -1,0 +1,10 @@
+django==5.0
+djangorestframework==3.10
+django-extensions==3.2
+django-model-utils==4.4
+django-filter==23.5
+django-debug-toolbar==4.1
+django-cors-headers==4.3
+django-allauth==0.61
+djangorestframework-simplejwt==5.3
+pillow==10.2
