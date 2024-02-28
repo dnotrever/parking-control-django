@@ -14,11 +14,14 @@ class Car(models.Model):
     owner = models.CharField(max_length=20, blank=False, null=False)
     maker = models.CharField(max_length=10, blank=False, null=False)
     model = models.CharField(max_length=10, blank=False, null=False)
-    plate = models.CharField(max_length=6, blank=False, null=False, unique=True)
+    plate = models.CharField(max_length=7, blank=False, null=False, unique=True)
 
     space = models.CharField(max_length=30, blank=False, null=False)
     entry = models.DateTimeField(auto_now_add=True)
     exit = models.DateTimeField(blank=True, null=True)
-    value = models.DecimalField(max_digits=12, decimal_places=5)
+    value = models.DecimalField(max_digits=12, decimal_places=5, blank=True, null=True, default=0.00000)
     operator = models.ForeignKey(User, related_name='cars', on_delete=models.CASCADE)
+
+    class Meta:
+        ordering = ('-entry',)
 
