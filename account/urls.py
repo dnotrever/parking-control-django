@@ -3,11 +3,10 @@ from django.urls import path
 from . import api
 
 urlpatterns = [
-
+    # AUTHs
     path('login/', TokenObtainPairView.as_view(), name='token_obtain'),
     path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
+    # GETs
     path('home/', api.home, name='home'),
-    path('test/', api.test, name='test'),
-    
+    # POSTs
 ]

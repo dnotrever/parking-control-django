@@ -7,7 +7,7 @@ from account.models import User
 
 class Car(models.Model):
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     is_parked = models.BooleanField(default=False)
 
