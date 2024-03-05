@@ -14,16 +14,26 @@ def cars_list(request):
 @api_view(['POST'])
 def car_insert(request):
 
-    print('\n', request.data, '\n')
-
     form = CarForm(request.data)
+
     if form.is_valid():
+
+        print('\n', request.data, '\n')
+
         car = form.save(commit=False)
+
         car.value = 10.0
         car.is_parked = True
         car.operator = request.user
+
         car.save()
+
         return JsonResponse({'status': 'success'})
+    
     else:
+
+        print('\n', 'Error!!!' '\n')
+
         return JsonResponse({'status': 'error'})
+    
 
