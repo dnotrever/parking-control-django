@@ -4,10 +4,9 @@ pytz
 pillow
 django
 djangorestframework
-djangorestframework-simplejwt
+django-allauth
 django-filter
 django-extensions
 django-model-utils
 django-debug-toolbar
 django-cors-headers
-django-allauth
