@@ -5,8 +5,7 @@ pillow
 django
 djangorestframework
 django-allauth
+django-cors-headers
 django-filter
 django-extensions
 django-model-utils
-django-debug-toolbar
-django-cors-headers
